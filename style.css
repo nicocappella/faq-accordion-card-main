@@ -1,0 +1,154 @@
+body {
+	font-family: 'Kumbh Sans', sans-serif;
+    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    color: hsl(238, 29%, 16%)
+}
+p{
+    font-size: 12px;
+}
+.container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.card {
+    position: relative;
+	background-color: #fff;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    background-repeat: no-repeat;
+    height: 600px;
+    overflow: visible;
+    box-shadow: 0 50px 30px -15px rgba(50,50,50,0.4);
+}
+.heading {
+    padding-bottom: 20px;
+    margin-top: 0;
+}
+hr {
+    border: 1px solid hsl(240, 5%, 91%);
+    margin-top: 0;
+}
+.card__wrapper__image{
+    width: 500px;
+    overflow: hidden;
+    top: -50px;
+    left: -500px
+}
+.card__wrapper__image > img:nth-child(1){
+    position: absolute;
+    top: 250px;
+    left: -94px;
+    z-index: 1000;
+}
+.card__wrapper__image > img:nth-child(2){
+    position: relative;
+    top: 115px;
+    left: -85px;
+}
+.card__wrapper__image > img:nth-child(3){
+    position: relative;    
+    top: -650px;
+    left:-550px;
+    
+}
+.card__text{
+    padding: 75px 175px 75px 25px;
+}
+
+.accordion {
+	width: 375px;
+}
+.accordion__div{
+    position: relative
+}
+
+.accordion__title label{
+	display: inline-block;
+    width: 350px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.accordion__title label:hover{
+	color: hsl(14, 88%, 65%)
+}
+.accordion__title label::after{
+    content: url('./images/icon-arrow-down.svg');
+    position: absolute;
+    right: 0;
+}
+.accordion__div > input[type="radio"]{
+    position: absolute;
+    left: -100vw
+}
+.accordion__div > input[type="radio"]:checked ~ .accordion__p{
+    height: auto;
+    overflow: visible;
+    margin-bottom: 20px;
+}
+.accordion__div > input[type="radio"]:checked ~ .accordion__title label{
+    font-weight: 700;
+}
+.accordion__div > input[type="radio"]:checked ~ .accordion__title label:hover{
+    color:hsl(238, 29%, 16%)
+}
+.accordion__div > input[type="radio"]:checked ~ .accordion__title label::after{
+    content: url('./images/icon-arrow-down.svg');
+    transform: rotate(180deg);
+    position: absolute;
+    right: 0;
+}
+
+.accordion__p{
+    overflow-y: hidden;
+    height: 0;
+    transition: height 0.3s ease;
+    font-size: 12px;
+    margin: 0;
+    color: hsl(237, 12%, 33%)
+}
+@media (max-width: 970px){
+    .card{
+        flex-direction: column;
+        margin-top: 200px;
+        height: 650px;
+    }
+    .card__wrapper__image{
+        width: 400px;
+        
+    }
+    .card__wrapper__image > img:nth-child(1){
+        position: absolute;
+        top: -80px;
+        left: 5px;
+        transform: scale(0.6);
+        z-index: 1000;
+    }
+    .card__wrapper__image > img:nth-child(2){
+        position: absolute;
+        top: -205px;
+        left: -25px;
+        transform: scale(0.7);
+
+    }
+    .card__wrapper__image > img:nth-child(3){
+        position: relative;    
+        top: -500px;
+        left: -275px;
+        transform: scale(0.35);
+        
+    }
+    .card__text{
+        padding: 25px;
+        padding-bottom: 50px;
+    }
+    .heading{
+        text-align: center;
+    }
+    .attribution{
+        margin-top: 200px;
+    }
+}
